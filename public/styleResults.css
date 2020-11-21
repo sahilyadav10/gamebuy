@@ -1,0 +1,156 @@
+html {
+  height: 100%;
+  overflow-x: hidden;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ccddb7;
+}
+body {
+  background: url("wave2.svg") #a21629;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0px) calc(100% - 25vh);
+  border-top: 8px solid #7b287d;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+ nav {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  }
+
+  .search-container {
+    margin-top: 1vh;
+    min-width: 100vw;
+  }
+  #search-bar {
+    min-width: 90vw;
+  }
+ 
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .search-container {
+    width: 100vw;
+  }
+
+  #search-bar {
+    width: 90vw;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .search-container {
+    width: 100vw;
+  }
+
+  #search-bar {
+    width: 70vw;
+  }
+
+  .company-name{
+    margin: 0 2vh;
+  }
+}
+
+nav {
+  display: inline-flex;
+  margin: 3vh 0;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+}
+#search-bar {
+  color: black;
+  padding-left: 10px;
+  border-radius: 5px;
+  width: 50vw;
+  height: 5vh;
+}
+
+.title-container {
+  margin: 5% 2vh;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10vh auto;
+  list-style: none;
+  justify-content: center;
+}
+
+#card {
+  background-color: #011323;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 60px -14px #000000;
+  overflow: hidden;
+  padding: 30px 16px;
+  height: fit-content;
+  text-align: center;
+  display: block;
+  margin: 5vh 5vw;
+}
+#card .name {
+  font-size: 1.2rem;
+}
+
+.btn {
+  border: none;
+  background: #404040;
+  color: #ffffff !important;
+  font-weight: 100;
+  padding: 10px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: #7b287d;
+  cursor: pointer;
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+}
+
+
+#card > a{
+  text-decoration: none;
+}
+
+#card .gameContainer {
+  padding: 20px;
+  display: flexbox;
+  align-items: center;
+}
+
+#card #price {
+  text-align: center;
+  margin-left: 8px;
+  margin-top: 20px;
+}
+#card #value {
+  font-size: 2rem;
+  color: #7b287d;
+}
+
+#card img {
+  max-width: 100px;
+  max-height: 100px;
+}

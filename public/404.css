@@ -1,0 +1,41 @@
+html {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  background: url("404.jpg") rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  border-top: 8px solid #7b287d;
+  Color: #ffffff;
+}
+
+main {
+  height: 100vh;
+  text-align: center;
+}
+
+.container{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+h1 {
+  letter-spacing: 10px;
+  font-size: 12em;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1em;
+}

@@ -1,0 +1,27 @@
+<%- include ("partials/header.ejs") %>
+<link rel="stylesheet" href="styleHome.css" />
+</head>
+
+<body>
+  <main>
+    <section class="website-name">
+      <div> <img src="/logo.png" alt="" srcset="" width="90%" height= "30%"></div>
+      
+    </section>
+    <div class="search-container">
+      <form action="/results" method="GET">
+        <input id="search-bar" type="text" name="game_title" placeholder="Enter a PC game title..." />
+      </form>
+    </div>
+    <div id="creator">
+      Photo by
+      <a
+        href="https://unsplash.com/@fabiraw?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Fabian
+        Albert</a>
+      on
+      <a
+        href="https://unsplash.com/s/photos/gaming?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+    </div>
+  </main>
+</body>
+<%- include ("partials/footer.ejs") %>

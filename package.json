@@ -1,0 +1,19 @@
+{
+  "name": "gamebuy",
+  "version": "1.0.0",
+  "description": "GameBuy compares prices of PC video games across multiple stores",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Sahil",  
+  "license": "ISC",
+  "dependencies": {
+    "@azure/cognitiveservices-imagesearch": "^3.0.1",
+    "@azure/ms-rest-azure-js": "^2.0.1",
+    "axios": "^0.20.0",
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1"
+  }
+}

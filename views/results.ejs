@@ -1,0 +1,51 @@
+<%- include ("partials/header.ejs") %>
+<link rel="stylesheet" href="styleResults.css" />
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="company-name">
+            <a href="/">
+                <img src="logo.png" alt="" srcset="" width="200px" height="50px">
+            </a>
+        </div>
+        <div class="search-container">
+            <form action="/results" method="GET">
+                <input id="search-bar" type="text" name="game_title" placeholder="Enter a PC game title..." />
+            </form>
+        </div>
+    </nav>
+
+    <div class="title-container">
+        <div>
+            <h1 id="game-title">
+                Search results for: <%= searchKeyword %>
+            </h1>
+            <h2 id="total-results">
+                <%= titles.length%> matches found
+            </h2>
+        </div>
+    </div>
+
+    <section class="cards">
+        <% for(let i = 0; i < titles.length; ++i){  %>
+        <li id="card">
+            <a href="/deals/<%=gameID[i]%>">
+                <div class="name">
+                    <%= titles[i] %>
+                </div>
+                <div class="gameContainer"><img src="<%= image[i] %>" alt="" srcset="">
+                    <div id="price">
+                        Lowest Price today
+                    </div>
+                    <div id="value">$<%= lowestPrice[i] %>
+                    </div>
+                </div>
+                <a href="/deals/<%=gameID[i]%>">
+                    <button class="btn">ALL DEALS</button>
+                </a>
+            </a>
+        </li>
+        <% } %>
+    </section>
+    <%- include ("partials/footer.ejs") %>

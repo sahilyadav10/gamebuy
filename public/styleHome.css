@@ -1,0 +1,96 @@
+html {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+  .search-container {
+    width: 100vw;
+  }
+
+  #search-bar {
+    width: 90vw;
+  }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .search-container {
+    width: 100vw;
+  }
+
+  #search-bar {
+    width: 90vw;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .search-container {
+    width: 100vw;
+  }
+
+  #search-bar {
+    width: 70vw;
+  }
+}
+
+body {
+  overflow: hidden;
+  background: url("background-home.jpg") rgba(0, 0, 0, 0.6);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  border-top: 8px solid #7b287d;
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: center;
+  align-content: center;
+}
+
+.website-name {
+  display: flex;
+  flex-basis: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.website-name > div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search-bar {
+  height: 7vh;
+  padding:0 1vh;
+  border: 5px solid rgba(112, 103, 207, 0.6);
+}
+
+#creator {
+  position: absolute;
+  bottom: 1vh;
+  right: 2vw;
+  font-size: 0.7em;
+  color: rgba(255, 255, 255, 0.535);
+}
+#creator a {
+  color: #cbf3d2;
+  text-decoration: none;
+}

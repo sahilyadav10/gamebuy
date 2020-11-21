@@ -1,0 +1,205 @@
+html {
+  height: 100%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #ccddb7;
+}
+body {
+  overflow-x: hidden;
+  background: url("wave2.svg") #a21629;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 0px) calc(100% - 10vh);
+  border-top: 8px solid #7b287d;
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+  nav {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+
+  .search-container {
+    margin-top: 1vh;
+    width: 90vw;
+  }
+  #search-bar {
+    min-width: 90vw;
+  }
+  .title-container {
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title-container h1 {
+    order: 1;
+  }
+  .title-container img {
+    order: 2;
+  }
+  #game-title {
+    font-size: 2rem;
+  }
+  #price1{
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 576px) {
+  .search-container {
+    width: 100vw;
+  }
+
+  #search-bar {
+    width: 70vw;
+  }
+  .company-name{
+    margin: 0 2vh;
+  }
+  .title-container {
+    display: flex;
+    margin: 3%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #price1{
+    display: none;
+  }
+  #game-title {
+    font-size: 2.5rem;
+  }
+
+  #card{
+    width: 20%;
+  }
+}
+
+@media (min-width: 768px) {
+  #game-title {
+    font-size: 3.5rem;
+  }
+  #price2{
+    display: none;
+  }
+  #price1{
+    display: unset;
+  }
+}
+
+nav {
+  display: inline-flex;
+  margin: 3vh 0;
+}
+
+.company-name {
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+}
+#search-bar {
+  color: black;
+  padding-left: 10px;
+  border-radius: 5px;
+  width: 50vw;
+  height: 5vh;
+}
+.title-container {
+  display: flex;
+  margin: 3%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.price{
+  margin: 3%
+}
+
+.price h2{
+  font-size: 1rem;
+}
+
+.value {
+  font-size: 1.5rem;
+  color: #7b287d;
+}
+
+.title-container > img {
+  height: 250px;
+  width: 250px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10vh auto;
+  list-style: none;
+  justify-content: center;
+}
+
+#card {
+  background-color: #011323;
+  border-radius: 0.5rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 1);
+  overflow: hidden;
+  padding: 30px 16px;
+  height: fit-content;
+  text-align: center;
+  display: block;
+  margin: 5vh 5vw;
+}
+
+#card a {
+  text-decoration: none;
+}
+
+#card .gameContainer {
+  padding: 20px 20px 0px 20px;
+  display: flexbox;
+  align-items: center;
+}
+
+#card img {
+  max-width: 90%;
+  max-height: 200px;
+}
+#card .savings {
+  margin-top: 5%;
+}
+
+.btn {
+  border: none;
+  background: #404040;
+  color: #ffffff !important;
+  font-weight: 100;
+  padding: 10px;
+  margin-top: 4%;
+  border-radius: 6px;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
+}
+.btn:hover {
+  color: #000000 !important;
+  font-weight: 700 !important;
+  letter-spacing: 3px;
+  background: #7b287d;
+  cursor: pointer;
+  box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.9);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.3s ease 0s;
+}

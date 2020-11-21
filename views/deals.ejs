@@ -1,0 +1,68 @@
+<%- include ("partials/header.ejs") %>
+<link rel="stylesheet" href="/styleDeals.css" />
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="company-name">
+            <a href="/">
+                <img src="/logo.png" alt="" srcset="" width="200px" height="50px">
+            </a>
+        </div>
+        <div class="search-container">
+            <form action="/results" method="GET">
+                <input id="search-bar" type="text" name="game_title" placeholder="Enter a PC game title..." />
+            </form>
+        </div>
+    </nav>
+    <div class="title-container">
+        <h1 id="game-title">
+            <%= selectedTitle %>
+            <div class="price" id="price1">
+                <h2>Retail price: 
+                    <span class="value"> $<%= retailPrice %></span>
+                 </h2>
+                <h2 id="cheapest">Lowest Price ever:
+                    <span class="value">$<%= cheapestPriceEver%></span>
+                </h2>
+            </div>
+        </h1>
+        <img src="<%=image%>" alt="" srcset="">
+    </div>
+    <div class= "price" id="price2">
+        <h2>Retail price: 
+            <span class="value"> $<%= retailPrice %></span>
+         </h2>
+        <h2 id="cheapest">Lowest Price ever:
+            <span class="value">$<%= cheapestPriceEver%></span>
+        </h2>
+    </div>
+    <section class="cards">
+
+        <% for(let i = 0; i < deals.length; ++i){  %>
+        <li id="card">
+            <a href="https://www.cheapshark.com/redirect?dealID={<%= JSON.stringify(deals[i].dealID) %>}"
+                target="_blank">
+                <div class="banner">
+                    <img src="https://www.cheapshark.com/img/stores/banners/<%=Number(deals[i].storeID - 1)%>.png"
+                        alt="" srcset="">
+                </div>
+                <div class="gameContainer">
+                    <div class="current"> Current Price
+                    </div>
+                    <div class="value">
+
+                        $<%= deals[i].currentPrice %>
+                    </div>
+                    <div class="savings">Save</div>
+
+                    <div class="value">
+                        <%= parseFloat(deals[i].savings).toFixed(2) %>%
+                    </div>
+                    <button class="btn">BUY NOW</button>
+            </a>
+        </li>
+        <% } %>
+    </section>
+</body>
+<%- include ("partials/footer.ejs") %>
